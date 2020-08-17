@@ -9,6 +9,7 @@ function App() {
     <Router>
     <div className="App">
       <div className='chats-wrapper'>
+<<<<<<< HEAD
         <div className="header">
 
 
@@ -30,6 +31,9 @@ function App() {
           </div>
           
         </div>
+=======
+       
+>>>>>>> dev
       </div>
     </div>
     </Router>
