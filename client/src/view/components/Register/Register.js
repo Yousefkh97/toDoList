@@ -1,23 +1,22 @@
 import React from 'react';
-import './Home.css';
+import './Register.css';
 
-function Home(props) {
-    const { chatItem } = props;
+function Register(props) {
     return (
         <div className="header">
 
-            <div className="buttons">
-                To Do List
-                <input type="text" name="name" placeholder="* Name"/>
-                <input type="text" name="family" placeholder="* Family"/>
-                <button>Register now</button>
+            <div className="formRegister">
+                <form>
+                Join the family to-do list
+                    <input type="email" name="mail" placeholder="* Email" />
+                    <input type="text" name="firstName" placeholder="* First Name" />
+                    <input type="text" name="lastName" placeholder="* Last Name" />
+                    <input type="text" name="imgUrl" placeholder="* Img Url" />
+                    <input type="password" name="password" placeholder="* Password" />
+                    <input type="submit" id="button" value="Register now"/>
+                </form>
             </div>
-
-            <div className="logo">
-                <img src={logo} alt='' />
-            </div>
-
         </div>
     )
 }
-export default Home;
+export default Register;

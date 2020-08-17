@@ -1,28 +1,35 @@
 .header{
     display: flex;
-  }
-  
-  .header img{
-    margin-left: 270px;
-    margin-top: 12px;
+    margin-left: 500px;
+    margin-top: 100px;
+    border: 2px solid gray;
+    box-shadow: 3px 3px 20px 3px #f0c7af;
+    border-radius: 5px;
     width: 700px;
-    height: 730px;
-    border-radius: 8px;
+    height: 500px;
   }
+
   
-  .buttons{
-    width: 500px;
-    margin-top: 280px;
-    margin-left: 100px;
+  .formRegister form{
+    width: 600px;
+    margin-top: 70px;
+    margin-left: 70px;
     display: flex;
     flex-direction: column;
-    font-size: 80px;
+    font-size: 50px;
     color: burlywood;
     font-weight: bold;
     font-style: italic;
+
+    border-radius: 2px;
   }
   
-  .buttons button{
+  .formRegister input{
+    margin-top: 20px;  
+    width: 150px;
+    font-weight: bold;
+  }
+ #button{
     margin-top: 20px;
     margin-left: 180px;
     width: 170px;
