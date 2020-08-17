@@ -3,7 +3,7 @@ import './Register.css';
 
 function Register(props) {
     return (
-        <div className="header">
+        <div className="headerRegister">
 
             <div className="formRegister">
                 <form>
@@ -13,7 +13,7 @@ function Register(props) {
                     <input type="text" name="lastName" placeholder="* Last Name" />
                     <input type="text" name="imgUrl" placeholder="* Img Url" />
                     <input type="password" name="password" placeholder="* Password" />
-                    <input type="submit" id="button" value="Register now"/>
+                    <input type="submit" id="buttonRegister" value="Register now"/>
                 </form>
             </div>
         </div>

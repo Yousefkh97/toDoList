@@ -1,6 +1,7 @@
 import React from 'react';
 import './Home.css';
 import logo from '../../../img/logo.jpg'
+
 import {
     BrowserRouter as Router,
     Link,
