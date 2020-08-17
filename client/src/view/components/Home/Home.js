@@ -1,14 +1,18 @@
 import React from 'react';
 import './Home.css';
+import logo from '../../../img/logo.jpg'
+import {
+    BrowserRouter as Router,
+    Link,
+  } from "react-router-dom";
 
 function Home(props) {
-    const { chatItem } = props;
     return (
         <div className="header">
 
             <div className="buttons">
                 To Do List
-                <button>Log In</button>
+                <Link to="/login"><button>Log In</button> </Link>
                 <button>Register now</button>
             </div>
 
