@@ -1,14 +1,23 @@
 import React from 'react';
-import './Register.css';
+import './Home.css';
 
-function ChatGrid(props) {
+function Home(props) {
     const { chatItem } = props;
     return (
-        <div className='chat'>
-            <p id={chatItem.isMe?'me':'other'}>{chatItem.text}</p>
-            <div className="msgArea">
-            </div> 
+        <div className="header">
+
+            <div className="buttons">
+                To Do List
+                <input type="text" name="name" placeholder="* Name"/>
+                <input type="text" name="family" placeholder="* Family"/>
+                <button>Register now</button>
+            </div>
+
+            <div className="logo">
+                <img src={logo} alt='' />
+            </div>
+
         </div>
     )
 }
-export default ChatGrid;
+export default Home;
