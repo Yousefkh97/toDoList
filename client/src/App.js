@@ -1,14 +1,29 @@
 import React from 'react';
-import logo from './img/logo.jpg'
+import {
+  BrowserRouter as Router,
+  Switch,
+  Route,
+  Link,
+  useHistory
+} from "react-router-dom";
 import './App.css';
 
+import Home from './view/components/Home/Home'
+import Login from './view/components/Login/Login'
+
 function App() {
+
   return (
-    <div className="App">
-      <div className='chats-wrapper'>
-       
-      </div>
-    </div>
+    <Router>
+      <Switch>
+        <Route path="/login">
+          <Login />
+        </Route>
+        <Route path="/">
+          <Home />
+        </Route>
+      </Switch>
+    </Router>
   );
 }
 
