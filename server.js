@@ -33,24 +33,26 @@ const Task = mongoose.model("Task", {
 })
 
 app.post('/api/login', (req, res) => {
-    const { userName, password } = req.body;
-    User.find({ userName: userName, password: password })
+    const { mail, password } = req.body;
+    User.find({ userEmail: mail, password: password })
         .then(doc => {
             res.send({ success: (doc.length == 0) ? false : true })
         })
 })
 
 app.post('/api/register', (req, res) => {
-    const { userEmail, firstName, lastName, imgUrl, password } = req.body;
-    User.find({ userEmail: userEmail })
+    const { mail, firstName, lastName, imgUrl, password } = req.body;
+    User.find({ userEmail: mail })
         .then(doc => {
             if (doc.length == 0) {
                 const newUser = new User({
-                     userEmail: userEmail, firstName: firstName,lastName:lastName,imgUrl:imgUrl,password:password
+                     userEmail: mail, firstName: firstName,lastName:lastName,imgUrl:imgUrl,password:password
                  });
-                 newUser.save().then(res.send(true)); 
+                 newUser.save().then(res.send({success: true})); 
             }
-            res.send(false)
+            else{
+                res.send({success: false})
+            }
         })
 })
 
