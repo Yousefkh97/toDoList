@@ -15,8 +15,6 @@ function Tasks(props) {
                     <div id='name'>{_id}</div>
                     <div><img src={imgUrl} /></div>
                 </div>
-
-
                 {
                     tasks.map((item, index) => {
                         return (<ItemToDo key={index} ItemToDo={item} />)
@@ -25,7 +23,9 @@ function Tasks(props) {
                     )
                 }
                 <div className="newTodo">
-                    <input type="text" name="newTodo" placeholder="Add new Todo" />
+                    <div><label>Add new ToDo</label></div>
+                    <div><input type="text" name="newTodo" placeholder="Title: " /></div>
+                    <div><input type="text" name="newTodo" placeholder="Content: " /></div>
                     <button>+</button>
                 </div>
             </form>

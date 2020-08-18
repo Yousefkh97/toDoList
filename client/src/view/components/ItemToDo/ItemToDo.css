@@ -1,3 +1,15 @@
 .checked{
     text-decoration-line: line-through;
 }
+
+.todo{
+    display: flex;
+    margin-left: 17%;
+    margin-top: 3%;
+    color: rgb(168, 151, 151);
+    
+}
+
+.item{
+    margin-right: 13%;
+}
