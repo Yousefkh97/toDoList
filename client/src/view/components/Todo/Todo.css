@@ -16,68 +16,7 @@
     box-shadow: 3px 3px 20px 3px #f0c7af;
     border-radius: 5px;
     width: 45%;
-    height: 70vh; 
   }
-.user{
-    display: flex;
-}
-.user img{
-    border: 1px solid #ddd;
-    border-radius: 50%;
-    padding: 2%;
-    width: 60%;
-    height: 70%;
-    margin-top: -20%;
-    margin-left: 140%;
-}
-  #name{
-    font-size: 150%;
-    color: rgb(243, 180, 204);
-    font-weight: bold;
-    font-style: italic;
-    margin-left: 13%;
-    margin-top: -2%;
-    margin-bottom: -2%;
-}
-
-.todo{
-    display: flex;
-    margin-left: 17%;
-    margin-top: 3%;
-    color: rgb(168, 151, 151);
-    
-}
-
-.item{
-    margin-right: 13%;
-}
-
-.item button{
-    margin-left: 8%;
-    margin-top: 12%;
-    color: rgb(167, 163, 163); 
-    background-color: rgb(255, 215, 221);
-    border-radius: 1px solid black;
-    box-shadow: 5px 10px #e9dfdf;
-    font-weight: bold;
-}
-
-.newTodo{
-    margin-left: 17%;
-    margin-top: -4%;
-    color: rgb(168, 151, 151);
-}
-
-.newTodo button{
-    margin-left: 8%;
-    margin-top: 12%;
-    color: rgb(167, 163, 163); 
-    background-color: rgb(255, 215, 221);
-    border-radius: 5px solid black;
-    box-shadow: 5px 10px #e9dfdf;
-    font-weight: bold;
-}
-  
 
 
   
