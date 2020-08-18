@@ -38,14 +38,24 @@ function Login(props) {
             }
         }).then(res => res.json())
             .then(data => {
-                const { success } = data;
-                if (success) {
-                    sessionStorage.setItem("userEmail", mail)
+                console.log(data)
+                if(data.length > 0){
+                    let lastName = data[0].lastName;
+                    sessionStorage.setItem("lastName", lastName)
                     history.push('/Todo')
-                } else {
-                    e.target.elements.password.value = "";
-                    //document.getElementById("formLoginId").reset();
                 }
+                else{
+                    e.target.elements.password.value = "";
+                }
+                // if(data.length)
+                // const { success } = data;
+                // if (success) {
+                //     sessionStorage.setItem("userEmail", mail)
+                //     history.push('/Todo')
+                // } else {
+                //     e.target.elements.password.value = "";
+                //     //document.getElementById("formLoginId").reset();
+                // }
             })
     }
 }

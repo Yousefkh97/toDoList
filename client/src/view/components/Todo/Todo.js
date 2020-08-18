@@ -4,23 +4,25 @@ import add from '../../../img/add.png'
 import deleteIcon from '../../../img/delete.png'
 
 function Todo(props) {
-    const [usersList , setUsersList] = useState([])
+    const [tasksList , setTasksList] = useState([])
     useEffect(() => {
-        let mail = sessionStorage.getItem("userEmail");
-        fetch('/api/getUsers', {
+        let lastName = sessionStorage.getItem("lastName");
+        fetch('/api/getTasks', {
             method: 'POST',
-            body: JSON.stringify({ mail }),
+            body: JSON.stringify({ lastName }),
             headers: {
                 'Content-Type': 'application/json'
             }
         }).then(res => res.json())
             .then(data => {
-                setUsersList(data);
+                console.log(data)
+                //setTasksList(data);
             })
     }, [])
+    //{usersList.length>0?usersList[0].lastName:'Family name'} 
     return (
         <div className="headerTodo">
-            <p id='title'>{usersList.length>0?usersList[0].lastName:'Family name'} ToDO List</p>
+            <p id='title'>ToDO List</p>
             {/* map */}
 
             <div className="formTodo">

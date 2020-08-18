@@ -36,7 +36,7 @@ app.post('/api/login', (req, res) => {
     const { mail, password } = req.body;
     User.find({ userEmail: mail, password: password })
         .then(doc => {
-            res.send({ success: (doc.length == 0) ? false : true })
+            res.send(doc)
         })
 })
 
@@ -56,16 +56,15 @@ app.post('/api/register', (req, res) => {
         })
 })
 
-app.post('/api/getUsers', (req, res) => {
-    const { mail } = req.body;
-    User.find({ userEmail: mail })
-        .then(doc => {
-            let user = doc[0];
-            User.find({lastName:user.lastName})
-            .then(docs =>{
-                res.send(docs)
-            })
-        })
+app.post('/api/getTasks', async (req, res) => {
+    const { lastName } = req.body;
+    let tasks = await Task.aggregate(
+        [{$match:{"user.lastName" : lastName}},
+         {$group:{
+            _id:"$user.firstName",
+            tasks:{ $push: "$$ROOT" }}}
+    ])
+    res.send(tasks)
 })
 
 
