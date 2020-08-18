@@ -28,6 +28,9 @@ function App() {
         <Route path="/Todo">
           <Todo />
         </Route>
+        <Route path="/TodoDetails">
+          <ToDoDetails />
+        </Route>
         <Route path="/">
           <Home />
         </Route>
