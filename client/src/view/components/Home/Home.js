@@ -1,6 +1,7 @@
 import React from 'react';
 import './Home.css';
 import logo from '../../../img/logo.jpg'
+
 import {
     BrowserRouter as Router,
     Link,
@@ -13,7 +14,7 @@ function Home(props) {
             <div className="buttons">
                 To Do List
                 <Link to="/login"><button>Log In</button> </Link>
-                <button>Register now</button>
+                <Link to="/Register"><button>Register now</button></Link>
             </div>
 
             <div className="logo">

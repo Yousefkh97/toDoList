@@ -3,36 +3,35 @@
   }
   
   .header img{
-    margin-left: 270px;
-    margin-top: 12px;
-    width: 700px;
-    height: 730px;
-    border-radius: 8px;
+    margin-top: 10%;
+    width: 220%;
+    height: 110%;
+    border-radius: 2%;
   }
   
   .buttons{
-    width: 500px;
-    margin-top: 280px;
-    margin-left: 100px;
+    width: 40%;
+    margin-top: 12%;
+    margin-left: 10%;
     display: flex;
     flex-direction: column;
-    font-size: 80px;
+    font-size: 400%;
     color: burlywood;
     font-weight: bold;
     font-style: italic;
   }
   
   .buttons button{
-    margin-top: 20px;
-    margin-left: 180px;
-    width: 170px;
-    height: 40px;
+    margin-top: 5%;
+    margin-left: 8%;
+    width: 37%;
+    height: 50%;
   
     background-color: #f5d8a9;
     color: rgb(143, 113, 68);
     font-style: italic;
-    font-size: 20px;
-    border-radius: 8px;
+    font-size: 30%;
+    border-radius: 20%;
     box-shadow: 5px 10px #888888;
   }
   

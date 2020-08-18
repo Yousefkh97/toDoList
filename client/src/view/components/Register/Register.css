@@ -1,0 +1,45 @@
+.headerRegister{
+    display: flex;
+    margin-left: 23%;
+    margin-top: 4%;
+    border: 2px solid gray;
+    box-shadow: 3px 3px 20px 3px #f0c7af;
+    border-radius: 5px;
+    width: 55%;
+    height: 470px; 
+  }
+
+  
+  .formRegister form{
+    width: 100%;
+    margin-top: 5%;
+    margin-left: 10%;
+    display: flex;
+    flex-direction: column;
+    font-size: 320%;
+    color: burlywood;
+    font-weight: bold;
+    font-style: italic;
+
+    /* border-radius: 10%; */
+  }
+  
+  .formRegister input{
+    margin-top: 4%;  
+    width: 28%;
+    font-weight: bold;
+  }
+ #buttonRegister{
+    margin-top: 7%;
+    margin-left: 30%;
+    width: 33%;
+    height: 40px;
+  
+    background-color: #f5d8a9;
+    color: rgb(143, 113, 68);
+    font-style: italic;
+    font-size: 40%;
+    border-radius: 8px;
+    box-shadow: 5px 10px #888888;
+  }
+  
