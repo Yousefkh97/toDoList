@@ -1,5 +1,4 @@
 #title{
-    /* width: 80%; */
     margin-top: 5%;
     margin-left: 15%;
     font-size: 300%;
@@ -7,10 +6,10 @@
     font-weight: bold;
     font-style: italic;
   }
-/*  */
 
-.headerTodo{
+  .headerTodo{
     display: flex;
+    flex-direction: column;
     margin-left: 26%;
     margin-top: 4%;
     border: 2px solid gray;
@@ -20,35 +19,54 @@
     height: 70vh; 
   }
 
+  #name{
+    font-size: 150%;
+    color: rgb(243, 180, 204);
+    font-weight: bold;
+    font-style: italic;
+    margin-left: 13%;
+    margin-top: -2%;
+    margin-bottom: -2%;
+}
 
-  .formTodo form{
-    width: 80%;
-    margin-top: 7%;
-    margin-left: 10%;
+.todo{
     display: flex;
-    flex-direction: column;
-    font-size: 320%;
-    color: burlywood;
-    font-weight: bold;
-    font-style: italic;
-  }
-  
-  .formTodo input{
-    margin-top: 10%;  
-    width: 30%;
-    font-weight: bold;
-  }
- #buttonTodo{
+    margin-left: 17%;
+    margin-top: 4%;
+    color: rgb(168, 151, 151);
+    
+}
+
+.item{
+    margin-right: 13%;
+}
+
+.item button{
+    margin-left: 8%;
     margin-top: 12%;
-    margin-left: 30%;
-    width: 33%;
-    height: 40px;
+    color: rgb(167, 163, 163); 
+    background-color: rgb(255, 215, 221);
+    border-radius: 1px solid black;
+    box-shadow: 5px 10px #e9dfdf;
+    font-weight: bold;
+}
+
+.newTodo{
+    margin-left: 17%;
+    margin-top: -4%;
+    color: rgb(168, 151, 151);
+}
+
+.newTodo button{
+    margin-left: 8%;
+    margin-top: 12%;
+    color: rgb(167, 163, 163); 
+    background-color: rgb(255, 215, 221);
+    border-radius: 5px solid black;
+    box-shadow: 5px 10px #e9dfdf;
+    font-weight: bold;
+}
   
-    background-color: #f5d8a9;
-    color: rgb(143, 113, 68);
-    font-style: italic;
-    font-size: 40%;
-    border-radius: 8px;
-    box-shadow: 5px 10px #888888;
-  }
+
+
   
