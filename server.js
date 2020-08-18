@@ -33,8 +33,8 @@ const Task = mongoose.model("Task", {
 })
 
 app.post('/api/login', (req, res) => {
-    const { userName, password } = req.body;
-    User.find({ userName: userName, password: password })
+    const { mail, password } = req.body;
+    User.find({ userEmail: mail, password: password })
         .then(doc => {
             res.send({ success: (doc.length == 0) ? false : true })
         })
