@@ -11,6 +11,7 @@ import './App.css';
 import Home from './view/components/Home/Home'
 import Login from './view/components/Login/Login'
 import Register from './view/components/Register/Register'
+import Todo from './view/components/Todo/Todo'
 
 function App() {
 
@@ -22,6 +23,9 @@ function App() {
         </Route>
         <Route path="/Register">
           <Register />
+        </Route>
+        <Route path="/Todo">
+          <Todo />
         </Route>
         <Route path="/">
           <Home />
