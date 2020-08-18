@@ -20,7 +20,7 @@ function Todo(props) {
     }, [])
     return (
         <div className="headerTodo">
-            <p id='title'>Nijem ToDO List</p>
+            <p id='title'>{usersList.length>0?usersList[0].lastName:'Family name'} ToDO List</p>
             {/* map */}
 
             <div className="formTodo">
