@@ -38,7 +38,6 @@ function Login(props) {
             }
         }).then(res => res.json())
             .then(data => {
-                console.log(data)
                 if(data.length > 0){
                     let lastName = data[0].lastName;
                     sessionStorage.setItem("lastName", lastName)

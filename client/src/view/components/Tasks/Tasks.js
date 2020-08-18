@@ -3,13 +3,15 @@ import './Tasks.css';
 
 function Tasks(props) {
     const { userItem } = props;
+    const {_id ,tasks} = userItem;
+    const {imgUrl} = tasks[0].user;
     return (
 
         <div className="formTodo">
             <form>
                 <div className="user">
-                    <div id='name'>{userItem.firstName}</div>
-                    <div><img src={userItem.imgUrl} /></div>
+                    <div id='name'>{_id}</div>
+                    <div><img src={imgUrl} /></div>
                 </div>
                 <div className="todo">
                     <div className="item">play lol</div>
