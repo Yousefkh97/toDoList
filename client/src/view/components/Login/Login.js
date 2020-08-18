@@ -1,13 +1,21 @@
 import React from 'react';
 import './Login.css';
 import Home from '../Home/Home';
-import Todo from '../Todo/Todo'
+import Todo from '../Todo/Todo';
+import {
+    BrowserRouter as Router,
+    Switch,
+    Route,
+    Link,
+    useHistory
+  } from "react-router-dom";
 
 function Login(props) {
+    let history = useHistory();
     return (
         <div className="headerLogin">
             <div className="formLogin">
-                <form onSubmit={handleSubmit}>
+                <form onSubmit={handleSubmit} id="formLoginId">
                     Welcome to your family to-do list
                     <input type="email" name="mail" placeholder="* Email" />
                     <input type="password" name="password" placeholder="* Password" />
@@ -32,9 +40,9 @@ function Login(props) {
             .then(data => {
                 const { success } = data;
                 if (success) {
-                    return ( <Home></Home>)
+                    history.push('/Todo')
                 } else {
-                    console.log(success)
+                    document.getElementById("formLoginId").reset();
                 }
             })
     }
