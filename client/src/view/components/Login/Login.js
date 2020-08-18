@@ -44,7 +44,8 @@ function Login(props) {
                     history.push('/Todo')
                 }
                 else{
-                    e.target.elements.password.value = "";
+                    document.getElementById("formLoginId").reset();
+                    //e.target.elements.password.value = "";
                 }
                 // if(data.length)
                 // const { success } = data;
