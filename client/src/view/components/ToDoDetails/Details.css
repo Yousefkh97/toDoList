@@ -24,7 +24,8 @@
   
   .formDetails input{
     margin-top: 10%;  
-    width: 30%;
+    width: 600px;
+    height: 300px;
     font-weight: bold;
   }
  #buttonDetails{

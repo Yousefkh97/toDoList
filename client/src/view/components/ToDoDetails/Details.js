@@ -7,9 +7,9 @@ function Details(props) {
         <div className="headerDetails">
             <div className="formDetails">
                 <form >
-                    Details of ToDoList
+                    Details of mission
                     
-                    <input type="test" name="password" placeholder="Enter Detail" />
+                    <input type="test" name="password" placeholder="Update Detail" />
                     <input type="submit" id="buttonDetails" value="Save" />
                 </form>
             </div>
