@@ -1,10 +1,12 @@
-import React from 'react';
+import React, { useState } from 'react';
 import './Tasks.css';
 
+import ItemToDo from '../ItemToDo/ItemToDo';
 function Tasks(props) {
     const { userItem } = props;
-    const {_id ,tasks} = userItem;
-    const {imgUrl} = tasks[0].user;
+    const { _id, tasks } = userItem;
+    const { imgUrl } = tasks[0].user;
+
     return (
 
         <div className="formTodo">
@@ -13,11 +15,15 @@ function Tasks(props) {
                     <div id='name'>{_id}</div>
                     <div><img src={imgUrl} /></div>
                 </div>
-                <div className="todo">
-                    <div className="item">play lol</div>
-                    <div className="item"><input type="checkbox" id="vehicle1" name="vehicle1" value="Bike" /></div>
-                    <div className="item"><button>-</button></div>
-                </div>
+
+
+                {
+                    tasks.map((item, index) => {
+                        return (<ItemToDo key={index} ItemToDo={item} />)
+
+                    }
+                    )
+                }
                 <div className="newTodo">
                     <input type="text" name="newTodo" placeholder="Add new Todo" />
                     <button>+</button>
