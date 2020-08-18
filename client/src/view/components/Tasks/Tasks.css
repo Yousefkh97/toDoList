@@ -1,5 +1,4 @@
 .formTodo{
-    /* margin-bottom: 1%; */
     border-bottom-style: dashed;
     border-color: rgb(167, 163, 163);
 }
@@ -26,19 +25,6 @@
     margin-bottom: -2%;
 }
 
-.todo{
-    display: flex;
-    margin-left: 17%;
-    margin-top: 3%;
-    color: rgb(168, 151, 151);
-    
-}
-
-.item{
-    margin-right: 13%;
-}
-
-
 button{
     margin-left: 8%;
     margin-top: 12%;
@@ -50,19 +36,36 @@ button{
 }
 
 .newTodo{
+    display: flex;
+    flex-direction: column;
+    width: 40%;
+    height: 27vh;
+    border-style: groove;
+    border-radius: 5px;
+    box-shadow: 5px 5px rgb(221, 199, 199);
     margin-left: 17%;
-    margin-top: -4%;
-    color: rgb(168, 151, 151);
+    margin-top: 10%;
+
+    color: rgb(185, 155, 155);
+    font-weight: bold;  
     margin-bottom: 10%;
 }
 
+.newTodo input{
+    margin-left: 13%;
+    margin-top: 10%;
+    color: rgb(168, 151, 151);
+}
+
+
 .newTodo button{
-    margin-left: 8%;
-    margin-top: 12%;
+    margin-left: 38%;
+    margin-top: 10%;
+    width: 20%;
     color: rgb(167, 163, 163); 
     background-color: rgb(255, 215, 221);
     border-radius: 5px solid black;
-    box-shadow: 5px 10px #e9dfdf;
+    box-shadow: 5px 5px #f3e8e8;
     font-weight: bold;
 }
   

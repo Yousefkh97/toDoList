@@ -2,24 +2,4 @@
     text-decoration-line: line-through;
 }
 
-.content[showConent='1'] {
-    animation: drop 1s 1;
-}
-
 .taskTitle {
-    cursor: pointer;
-    background: red;
-    padding: 10px;
-
-}
-
-@keyframes drop {
-    0% {
-        opacity: 0;
-        transform: translateY(-80px);
-    }
-    100% {
-        opacity: 1;
-        transform: translateY(0px);
-    }
-}
