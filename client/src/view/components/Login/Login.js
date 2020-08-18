@@ -1,6 +1,7 @@
 import React from 'react';
 import './Login.css';
 import Home from '../Home/Home';
+import Todo from '../Todo/Todo'
 
 function Login(props) {
     return (
@@ -33,7 +34,7 @@ function Login(props) {
                 if (success) {
                     return ( <Home></Home>)
                 } else {
-                    
+                    console.log(success)
                 }
             })
     }
