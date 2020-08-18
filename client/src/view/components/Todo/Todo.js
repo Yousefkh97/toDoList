@@ -12,8 +12,8 @@ function Todo(props) {
             <div className="formTodo">
                 <form>
                     <div className="user">
-                    <div id='name'>Lina</div>
-                    <div><img src="https://media-exp1.licdn.com/dms/image/C4D03AQFrSZo2ZVEpsQ/profile-displayphoto-shrink_100_100/0?e=1599091200&v=beta&t=j4uaOlKITq5N5ec56H6gDor8yrjc6YiAJeJghv7miNw"/></div>
+                        <div id='name'>Lina</div>
+                        <div><img src="https://media-exp1.licdn.com/dms/image/C4D03AQFrSZo2ZVEpsQ/profile-displayphoto-shrink_100_100/0?e=1599091200&v=beta&t=j4uaOlKITq5N5ec56H6gDor8yrjc6YiAJeJghv7miNw" /></div>
                     </div>
                     <div className="todo">
                         <div className="item">play lol</div>
