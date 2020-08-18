@@ -17,7 +17,7 @@ function Tasks(props) {
                 </div>
                 {
                     tasks.map((item, index) => {
-                        return (<ItemToDo key={index+'task'} ItemToDo={item} modal={modal} setModal={setModal} />)
+                        return (<ItemToDo key={index + 'task'} ItemToDo={item} modal={modal} setModal={setModal} />)
                     })
                 }
                 <div className="newTodo">
@@ -34,36 +34,32 @@ export default Tasks;
 
 
 
-function AddNewToDo(e)
-{
+function AddNewToDo(e) {
     e.preventDefault();
-    try 
-    {
-        const newTitle = e.target.elements.newTitle.value;
-        const newContent = e.target.elements.newContent.value;
-
-        // user: {
-        //     userEmail: String,
-        //     firstName: String,
-        //     lastName: String,
-        //     imgUrl: String,
-        //     password: String
-        // },
-        // taskTitle: String,
-        // taskContent: String,
-        // done: Boolean
-
+    try {
+        const taskTitle = e.target.elements.newTitle.value;
+        const taskContent = e.target.elements.newContent.value;
 
         fetch('/addNewToDo', {
             method: 'PUT',
-            body: JSON.stringify(userItem),
+            body: JSON.stringify(tasks[0].user, taskTitle, taskContent),
             headers: {
                 'Content-Type': 'application/json'
             },
+        })
+
+            .then(res => res.json())
+            .then(data => {
+                const { addToDo } = data;
+                if (existSkin == true) {
+                    console.log('Added successfully');
+                }
+                else {
+                    console.log('Failed to add');
+                }
             })
 
-    }catch(err) 
-    {
-      console.error(err)
+    } catch (err) {
+        console.error(err)
     }
 }
