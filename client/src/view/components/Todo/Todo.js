@@ -1,9 +1,23 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import './Todo.css';
 import add from '../../../img/add.png'
 import deleteIcon from '../../../img/delete.png'
 
 function Todo(props) {
+    const [usersList , setUsersList] = useState([])
+    useEffect(() => {
+        let mail = sessionStorage.getItem("userEmail");
+        fetch('/api/getUsers', {
+            method: 'POST',
+            body: JSON.stringify({ mail }),
+            headers: {
+                'Content-Type': 'application/json'
+            }
+        }).then(res => res.json())
+            .then(data => {
+                setUsersList(data);
+            })
+    }, [])
     return (
         <div className="headerTodo">
             <p id='title'>Nijem ToDO List</p>

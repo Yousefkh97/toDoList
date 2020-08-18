@@ -56,6 +56,20 @@ app.post('/api/register', (req, res) => {
         })
 })
 
+app.post('/api/getUsers', (req, res) => {
+    const { mail } = req.body;
+    User.find({ userEmail: mail })
+        .then(doc => {
+            let user = doc[0];
+            User.find({lastName:user.lastName})
+            .then(docs =>{
+                res.send(docs)
+            })
+        })
+})
+
+
+
 // app.post('/api/addtask', (req, res) => {
 //     const { userEmail, firstName, lastName, imgUrl, password } = req.body;
 //     User.find({ userEmail: userEmail })

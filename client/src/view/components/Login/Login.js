@@ -40,9 +40,11 @@ function Login(props) {
             .then(data => {
                 const { success } = data;
                 if (success) {
+                    sessionStorage.setItem("userEmail", mail)
                     history.push('/Todo')
                 } else {
-                    document.getElementById("formLoginId").reset();
+                    e.target.elements.password.value = "";
+                    //document.getElementById("formLoginId").reset();
                 }
             })
     }
