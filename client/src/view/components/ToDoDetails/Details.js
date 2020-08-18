@@ -2,18 +2,18 @@ import React from 'react';
 import './Details.css';
 
 
-function Login(props) {
+function Details(props) {
     return (
         <div className="headerDetails">
             <div className="formDetails">
-                <form onSubmit={handleSubmit}>
+                <form >
                     Details of ToDoList
                     
                     <input type="test" name="password" placeholder="Enter Detail" />
-                    <input type="submit" id="buttonDetails" value="Log In" />
+                    <input type="submit" id="buttonDetails" value="Save" />
                 </form>
             </div>
         </div>
     )
 }
-export default Login;
+export default Details;
