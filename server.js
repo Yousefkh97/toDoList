@@ -71,19 +71,19 @@ app.post('/api/getTasks', async (req, res) => {
 
 
 
-// app.post('/api/addtask', (req, res) => {
-//     const { userEmail, firstName, lastName, imgUrl, password } = req.body;
-//     User.find({ userEmail: userEmail })
-//         .then(doc => {
-//             if (doc.length == 0) {
-//                 const newUser = new User({
-//                      userEmail: userEmail, firstName: firstName,lastName:lastName,imgUrl:imgUrl,password:password
-//                  });
-//                  newUser.save().then(res.send(true)); 
-//             }
-//             res.send(false)
-//         })
-// })
+app.post('/addNewToDo', (req, res) => {
+    const { tasks[0].user, taskTitle, taskContent } = req.body;
+    User.find({ userEmail: userEmail })
+        .then(doc => {
+            if (doc.length == 0) {
+                const newUser = new User({
+                     userEmail: userEmail, firstName: firstName,lastName:lastName,imgUrl:imgUrl,password:password
+                 });
+                 newUser.save().then(res.send(true)); 
+            }
+            res.send(false)
+        })
+})
 
 
 
