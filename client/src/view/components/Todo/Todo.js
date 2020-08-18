@@ -3,7 +3,9 @@ import './Todo.css';
 import Tasks from '../Tasks/Tasks';
 
 function Todo(props) {
-    const [tasksList , setTasksList] = useState([])
+    const [tasksList, setTasksList] = useState([]);
+    const [modal, setModal] = useState({ show: false, text: 'test' });
+
     let lastName = sessionStorage.getItem("lastName");
     useEffect(() => {
         fetch('/api/getTasks', {
@@ -25,10 +27,11 @@ function Todo(props) {
             <p id='title'>{lastName} ToDO List</p>
             {
                 tasksList.map((userItem, index) => {
-                    return <Tasks key={index} userItem={userItem} />
-                }
-                )
-            } 
+                    
+                    return <Tasks key={index+'task'} userItem={userItem} modal={modal} setModal={setModal} />
+                })
+            }
+            {modal.show ? <h1>{modal.text}</h1> : null}
         </div>
     )
 }

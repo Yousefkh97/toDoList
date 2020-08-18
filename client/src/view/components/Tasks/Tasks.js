@@ -3,7 +3,7 @@ import './Tasks.css';
 
 import ItemToDo from '../ItemToDo/ItemToDo';
 function Tasks(props) {
-    const { userItem } = props;
+    const { userItem, modal, setModal } = props;
     const { _id, tasks } = userItem;
     const { imgUrl } = tasks[0].user;
 
@@ -17,10 +17,8 @@ function Tasks(props) {
                 </div>
                 {
                     tasks.map((item, index) => {
-                        return (<ItemToDo key={index} ItemToDo={item} />)
-
-                    }
-                    )
+                        return (<ItemToDo key={index+'task'} ItemToDo={item} modal={modal} setModal={setModal} />)
+                    })
                 }
                 <div className="newTodo">
                     <div><label>Add new ToDo</label></div>
