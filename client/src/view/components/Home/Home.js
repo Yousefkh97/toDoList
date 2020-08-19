@@ -3,7 +3,6 @@ import './Home.css';
 import logo from '../../../img/logo.jpg'
 
 import {
-    BrowserRouter as Router,
     Link,
   } from "react-router-dom";
 

@@ -1,12 +1,6 @@
 import React from 'react';
 import './Login.css';
-import Home from '../Home/Home';
-import Todo from '../Todo/Todo';
 import {
-    BrowserRouter as Router,
-    Switch,
-    Route,
-    Link,
     useHistory
   } from "react-router-dom";
 
