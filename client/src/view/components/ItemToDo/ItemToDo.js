@@ -1,8 +1,6 @@
 import React, { useState } from 'react';
 import './ItemToDo.css';
 
-import Content from '../Content/Content'
-
 function ItemToDo(props) {
     const { ItemToDo, modal, setModal } = props;
     const [isCheck, setIsCheck] = useState(true);
