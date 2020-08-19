@@ -1,5 +1,19 @@
 .checked {
     text-decoration-line: line-through;
+    display: flex;
 }
 
 .taskTitle {
+    margin-left: 17%;
+}
+
+.todo{
+    display: flex;
+    margin-top: 5%;
+    /* margin-left: 20%; */
+}
+
+.item{
+    margin-right: 10%;
+    margin-left: 10%;
+}

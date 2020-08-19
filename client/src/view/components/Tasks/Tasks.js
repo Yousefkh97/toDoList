@@ -34,32 +34,32 @@ export default Tasks;
 
 
 
-function AddNewToDo(e) {
-    e.preventDefault();
-    try {
-        const taskTitle = e.target.elements.newTitle.value;
-        const taskContent = e.target.elements.newContent.value;
+// function AddNewToDo(e) {
+//     e.preventDefault();
+//     try {
+//         const taskTitle = e.target.elements.newTitle.value;
+//         const taskContent = e.target.elements.newContent.value;
 
-        fetch('/addNewToDo', {
-            method: 'PUT',
-            body: JSON.stringify(tasks[0].user, taskTitle, taskContent),
-            headers: {
-                'Content-Type': 'application/json'
-            },
-        })
+//         fetch('/addNewToDo', {
+//             method: 'PUT',
+//             body: JSON.stringify(tasks[0].user, taskTitle, taskContent),
+//             headers: {
+//                 'Content-Type': 'application/json'
+//             },
+//         })
 
-            .then(res => res.json())
-            .then(data => {
-                const { addToDo } = data;
-                if (existSkin == true) {
-                    console.log('Added successfully');
-                }
-                else {
-                    console.log('Failed to add');
-                }
-            })
+//             .then(res => res.json())
+//             .then(data => {
+//                 const { addToDo } = data;
+//                 if (existSkin == true) {
+//                     console.log('Added successfully');
+//                 }
+//                 else {
+//                     console.log('Failed to add');
+//                 }
+//             })
 
-    } catch (err) {
-        console.error(err)
-    }
-}
+//     } catch (err) {
+//         console.error(err)
+//     }
+// }
